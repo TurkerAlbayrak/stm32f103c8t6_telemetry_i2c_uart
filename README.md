@@ -265,7 +265,29 @@ Bu adımı istediğiniz zaman, ayrı bir mesajda daha detaylı isteyebilirsiniz 
 şimdilik 4. adımdaki simülasyon tek başına sisteminizin doğru çalıştığını göstermeye yeterlidir.
 
 ---
-
+```
+1
+pyserial'i kurun
+Bir terminal/komut istemi açın ve 'pip install pyserial' yazıp Enter'a basın. Kurulum bitene kadar bekleyin.
+2
+com0com'u indirip kurun (Windows)
+https://sourceforge.net/projects/com0com/ adresine gidin, 'Files' sekmesinden en güncel sürümü (setup dosyası, imzalı/signed olanı) indirin. İndirdiğiniz .exe dosyasını çalıştırıp kurulum sihirbazını varsayılan seçeneklerle tamamlayın. Windows 'imzasız sürücu' uyarısı verirse 'Yükle' / 'Install this driver software anyway' seçin.
+3
+COM1 ↔ COM2 çiftini oluşturun
+Kurulum bitince Başlat menüsünden 'Setup Command Prompt' (com0com ile birlikte gelir) ya da masaüstündeki 'com0com setup' kısayolunu açın. Açılan pencerede iki port çifti göreceksiniz (genelde CNCA0 ↔ CNCB0). Bunları tanıdık isimlere çevirmek için sırayla: 'change CNCA0 PortName=COM1' yazıp Enter, sonra 'change CNCB0 PortName=COM2' yazıp Enter'a basın. Ardından 'list' yazarak COM1 ve COM2'nin oluştuğunu doğrulayın. Pencereyi kapatabilirsiniz.
+4
+IO Virtual Term parçasını kaldırın
+PICSimLab'de Spare Parts penceresinden mevcut IO Virtual Term parçasını seçip silin (sağ tık > Delete/Remove, ya da parçayı seçip Delete tuşuna basın). Böylece PA9/PA10 pinleri boşa çıkar.
+5
+PICSimLab'de gerçek seri portu COM1 olarak ayarlayın
+PICSimLab ana penceresinin alt kısmındaki durum çubuğunda (status bar) seri port bilgisinin yazdığı alana tıklayın (bazı sürümlerde bu bir menü öğesi olarak da 'Serial' / 'Comm' adıyla üst menüde bulunur). Açılan ayardan portu COM1 olarak seçin ve hızın 115200 olduğundan emin olun. Bu, kartın PA9(TX)/PA10(RX) pinlerini doğrudan COM1'e bağlar.
+6
+ground_station.py'yi COM2 üzerinden çalıştırın
+'main_TAM_ENTEGRASYON.c' ile birlikte indirdiğiniz ground_station.py dosyasının bulunduğu klasöre terminalde gidin (cd komutuyla). 'python ground_station.py COM2' yazıp çalıştırın. Bu, com0com çiftinin COM1'e KARŞI ucudur — PICSimLab COM1'e yazar, siz COM2'den okursunuz.
+7
+PICSimLab'de Run'a basıp Python çıktısını izleyin
+PICSimLab'de Load Firmware ile .bin dosyanızı zaten yüklediyseniz sadece Run (▶) butonuna basın (önce yeniden yüklemeniz gerekmez, kod değişmedi). Python terminalinde gerçek zamanlı, checksum'ı doğrulanmış, okunaklı telemetri satırlarının akmaya başladığını göreceksiniz.
+```
 ## 6) Sorun Giderme
 
 | Belirti | Çözüm |
