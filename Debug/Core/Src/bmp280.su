@@ -1,0 +1,8 @@
+../Core/Src/bmp280.c:24:26:BMP280_WriteReg	32	static
+../Core/Src/bmp280.c:30:26:BMP280_ReadRegs	32	static
+../Core/Src/bmp280.c:38:26:BMP280_ReadCalibration	40	static
+../Core/Src/bmp280.c:76:15:BMP280_CompensateT	56	static
+../Core/Src/bmp280.c:87:15:BMP280_CompensateP	48	static
+../Core/Src/bmp280.c:110:19:BMP280_Init	24	static
+../Core/Src/bmp280.c:144:6:BMP280_SetSeaLevelPressure	16	static
+../Core/Src/bmp280.c:149:19:BMP280_ReadAll	56	static

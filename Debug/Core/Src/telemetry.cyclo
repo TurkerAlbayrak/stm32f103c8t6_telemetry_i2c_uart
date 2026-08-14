@@ -1,0 +1,5 @@
+../Core/Src/telemetry.c:19:6:Telemetry_Init	1
+../Core/Src/telemetry.c:26:16:Telemetry_Checksum	2
+../Core/Src/telemetry.c:37:19:Telemetry_Send	2
+../Core/Src/telemetry.c:67:10:Telemetry_GetSentCount	1
+../Core/Src/telemetry.c:72:6:Telemetry_GetLastFrame	1

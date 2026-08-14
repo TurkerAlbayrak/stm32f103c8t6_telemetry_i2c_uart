@@ -1,0 +1,5 @@
+../Core/Src/telemetry.c:19:6:Telemetry_Init	16	static
+../Core/Src/telemetry.c:26:16:Telemetry_Checksum	24	static
+../Core/Src/telemetry.c:37:19:Telemetry_Send	80	static
+../Core/Src/telemetry.c:67:10:Telemetry_GetSentCount	4	static
+../Core/Src/telemetry.c:72:6:Telemetry_GetLastFrame	16	static

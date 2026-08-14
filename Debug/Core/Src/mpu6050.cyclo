@@ -1,0 +1,8 @@
+../Core/Src/mpu6050.c:22:26:MPU6050_WriteReg	1
+../Core/Src/mpu6050.c:28:26:MPU6050_ReadRegs	1
+../Core/Src/mpu6050.c:36:13:MPU6050_SetAccelScale	5
+../Core/Src/mpu6050.c:48:13:MPU6050_SetGyroScale	5
+../Core/Src/mpu6050.c:62:19:MPU6050_Init	8
+../Core/Src/mpu6050.c:108:19:MPU6050_ReadAll	3
+../Core/Src/mpu6050.c:144:19:MPU6050_ReadAccel	3
+../Core/Src/mpu6050.c:165:19:MPU6050_ReadGyro	3
